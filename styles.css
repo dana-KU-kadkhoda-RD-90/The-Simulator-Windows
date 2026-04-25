@@ -1,0 +1,693 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Start The Desktop Styles */
+
+#desktop {
+    background-image: url(wallper.webp);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+#desktop button {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    align-items: center;
+    text-align: left;
+    font-size: 38px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.1s ease-in-out;
+    color: white;
+    margin: 5px;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    user-select: none;
+}
+
+#desktop button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+#desktop button span {
+    font-size: 12px;
+    margin-bottom: 20px;
+} 
+
+/* End The Desktop Styles */
+
+
+/* Start The Taskbar Styles */
+#taskbar {
+    width: 100%;
+    height: 45px;
+    background-color: rgba(224, 224, 224, 0.98);
+    position: absolute;
+    bottom: 0;
+    padding: 4px 8px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0;
+}
+
+.task-icon {
+    font-size: 25px;
+    line-height: 0;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+#start-icon {
+    user-select: none;
+}
+
+#taskbar .start-task .task-icon.active {
+    background-color: rgba(200,200,200,0.9);
+    border-radius: 6px;
+}
+
+.task-icon:hover {
+    background-color: rgba(243, 243, 243, 0.98);
+}
+
+#taskbar a:first-child:hover{
+    background-color: rgba(224, 224, 224, 0.98);
+}
+
+#taskbar .start-task #search {
+    border-radius: 25px;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 1px 8px;
+    outline: none;
+    margin-right: 10px;
+}
+
+#taskbar .start-task {
+    display: flex;
+    user-select: none;
+}
+
+#taskbar .end-task {
+    display: flex;
+    gap: 12px;
+    user-select: none;
+    position: relative;
+}
+
+#taskbar .end-task div {
+    position: relative;
+}
+
+#taskbar .end-task div:first-of-type {
+    display: flex;
+    gap: 5px;
+}
+
+#taskbar .end-task div:last-child {
+    display: flex;
+    gap: 5px;
+    font-size: 10px;
+}
+
+
+.lang {
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#set-sound1 {
+    display: none;
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999999999999999999999999999;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #3f6fa3;
+}
+#set-sound2 {
+    display: none;
+    background-color: #85a2c2;
+    width: 10px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#set-sound3 {
+    display: none;
+    background-color: #e2efff;
+    width: 25px;
+    height: 120px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#up-sound , #down-sound {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#sound {
+    cursor: pointer;
+    user-select: none;
+}
+
+#sound::after {
+    content: "Headphones (Conexant ISST Audio)";
+    position: absolute;
+    background-color: #d9ebff;
+    border-radius: 5px;
+    padding: 6px;
+    bottom: 32px;
+    left: -130%;
+    width: 200px;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0;
+    z-index: 9999999999999999999;
+    transition: all 0.3s;
+}
+
+#sound:hover::after {
+    opacity: 1;
+}
+
+.end-task .con-small-app {
+    position: absolute;
+    bottom: 40px;
+    width: 130px;
+    height: 50px;
+    background-color: #d9ebffd3;
+    text-align: center;
+    right: 220px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    user-select: none;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.con-small-app div span {
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.con-small-app div:last-child span {
+    font-size: 16px;
+}
+
+#bat::after {
+    content: "Battery status: 23% available (plugged in)";
+    position: absolute;
+    background-color: #d9ebff;
+    border-radius: 5px;
+    padding: 6px;
+    bottom: 32px;
+    left: -15%;
+    width: 230px;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0;
+    z-index: 9999999999999999999;
+    user-select: none;
+    transition: all 0.3s;
+}
+
+#bat:hover::after {
+    opacity: 1;
+}
+
+/* End The Taskbar Styles */
+
+
+
+/* Start The Window Styles */
+
+.win-pc {
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 90px;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    background-color: white;
+    min-width: 1200px;
+    max-width: 100%;
+    user-select: none;
+}
+
+.window-hidden {
+    display: none !important;
+}
+
+
+.win-pc .header-win-pc {
+    background-color: rgb(245,245,245);
+    padding: 0 12px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px 6px 0 0;
+    cursor: grab;
+}
+
+.win-pc .header-win-pc:active {
+    cursor: grabbing;
+}
+
+.win-pc .header-win-pc .name-header {
+    background-color: rgb(235, 235, 235);
+    width: 200px;
+    padding: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+.win-pc .header-win-pc .win-btn button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.win-pc .header-win-pc .win-btn button:nth-child(1):hover,
+.win-pc .header-win-pc .win-btn button:nth-child(2):hover {
+    background-color: rgb(210, 210, 210);
+}
+
+.win-pc .header-win-pc .win-btn button:nth-child(3):hover {
+    background-color: rgb(205, 70, 70);
+}
+
+.win-pc .header-win-pc .name-header div:first-child {
+    display: flex;
+    justify-content: start;
+    gap: 6px;
+}
+
+.win-pc .header-win-pc .name-header div:last-child button {
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.win-pc .header-win-pc .name-header div:last-child button:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.win-pc .header-2-win-pc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(235, 235, 235);
+    padding: 8px;
+}
+
+.win-pc .header-2-win-pc div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 10%;
+}
+
+.win-pc .header-2-win-pc div:nth-child(2) {
+    width: 70%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 4px;
+}
+.win-pc .header-2-win-pc input {
+    width: 20%;
+    background-color: white;
+    border-radius: 4px;
+    padding: 7px;
+    border: none;
+}
+
+.win-pc .main {
+    display: flex;
+    gap: 10px;
+    background: white;
+}
+
+.win-pc .main .sidbar {
+    width: 180px;
+    background-color: rgba(248, 248, 248, 0.96);
+    display: flex;
+    flex-direction: column;
+}
+
+.win-pc .main .sidbar .part-1-of-sidbar ,
+.win-pc .main .sidbar .part-2-of-sidbar ,
+.win-pc .main .sidbar .part-3-of-sidbar {
+    border-bottom: 1px solid gray;
+    font-size: 14px;
+}
+
+.win-pc .main .sidbar .part-1-of-sidbar p ,
+.win-pc .main .sidbar .part-2-of-sidbar p ,
+.win-pc .main .sidbar .part-3-of-sidbar li {
+    margin-bottom: 6px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.win-pc .main .sidbar .part-1-of-sidbar p:hover ,
+.win-pc .main .sidbar .part-2-of-sidbar p:hover ,
+.win-pc .main .sidbar .part-3-of-sidbar li:hover ,
+.win-pc .main .sidbar .part-3-of-sidbar p:hover {
+    background-color: #77b9ff70;
+}
+
+.win-pc .main .sidbar .part-3-of-sidbar li:first-child {
+    margin-top: 6px;
+    padding: 5px;
+} 
+
+.win-pc .drive {
+    display: flex;
+    gap: 30px;
+    height: 100px;
+    padding: 25px 10px 0;
+    
+}
+
+.win-pc .drive span {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    gap: 8px;
+    margin-bottom: 100%;
+    padding: 6px 5px 15px;
+    cursor: pointer;
+    height: 60px;
+    transition: all 0.01s;
+}
+
+.win-pc .drive span:hover {
+    background-color: rgba(158, 216, 255, 0.333);
+    border: 1px solid rgba(133, 140, 145, 0.333);
+}
+
+.win-pc .drive span:active {
+    background-color: rgba(158, 216, 255, 0.333);
+    border: 1px solid rgba(53, 60, 65, 0.333);
+}
+
+.win-pc .drive span div {
+    margin-top: 14px;
+}
+
+.win-pc .drive span div div:first-child {
+    width: 170px;
+    border: 1px solid gray;
+    background-color: rgb(230, 230, 230);
+    position: relative;
+    height: 16px;
+}
+
+.win-pc .drive span div div:last-child {
+    font-size: 13px;
+    margin-top: 0;
+}
+
+.win-pc .drive span div div:first-child:after {
+    content: "";
+    width: 45%;
+    background-color: rgb(43, 43, 217);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.active-window {
+    border: 2px solid #9acbff;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.header-win-pc.grabbing {
+    cursor: grabbing !important;
+}
+
+.win-btn.grabbing {
+    cursor: grabbing !important;
+}
+
+.main-trash {
+    width: 100%;
+}
+
+.main-trash h6 {
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+#main-files {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#main-files div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#main-files div:hover {
+    background-color: rgba(230, 230, 230, 0.6);
+    border: 2px solid rgb(205, 205, 205);
+}
+
+#main-files div p {
+    font-size: 15px;
+}
+
+#main-files div span {
+    font-size: 28px;
+}
+
+#show-small-app {
+    cursor: pointer;
+}
+
+#win-note-pc {
+    overflow: auto;
+    min-width: 600px;
+    max-width: 401px;
+    height: 400px;
+}
+
+#win-note-pc #big-font,
+#win-note-pc #small-font {
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 2px;
+    display: flex;
+    line-height: 0.66;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#win-note-pc #big-font:hover,
+#win-note-pc #small-font:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+#win-note-pc div:nth-child(3) {
+    display: flex;
+    gap: 10px;
+}
+
+#win-note-pc div:nth-child(3) span {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid black;
+    transition: all 0.3s;
+    border-radius: 50%;
+}
+
+#win-note-pc div:nth-child(3) span:hover {
+    opacity: 0.6;
+}
+
+
+#text-note {
+    outline: none;
+    width: 100%;
+    resize: none;
+    height: 362px;
+    padding: 6px;
+    font-family: sans-serif , Verdana, Geneva, Tahoma;
+    font-size: 15px;
+}
+
+/* End The Window Styles */
+
+
+
+/* Start The Start-Menu Styles */
+.start-win {
+    background-color: rgb(239, 239, 239);
+    padding: 18px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99999999999999999999999999;
+    width: 500px;
+    bottom: 45px;
+    margin: 10px;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.start-win input {
+    padding: 6px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+}
+
+.start-win h3 {
+    margin-block: 30px;
+}
+
+.start-win div {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+
+.start-win div div div {
+    font-size: 25px;
+    text-align: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 5px;
+}
+
+.start-win div div div:hover {
+    background-color: #e2e2e2;
+    border: 1px solid gainsboro;
+}
+
+.start-win div div div p {
+    font-size: 15px;
+}
+
+.start-win table {
+    position: relative;
+}
+
+.start-win table tr {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.start-win table tr td {
+    display: flex;
+    font-size: 25px;
+    gap: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.start-win table tr td:hover {
+    background-color: #e2e2e2;
+    border: 1px solid gainsboro;
+}
+
+.start-win table tr td div {
+    display: block;
+    font-size: 13px;
+}
+
+.start-win table::after {
+    content: "Recommended";
+    position: absolute; 
+    top: -50px;
+    font-weight: 700;
+    font-size: 18px;
+}   
+
+.start-win div div {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* End The Start-Menu Styles */
