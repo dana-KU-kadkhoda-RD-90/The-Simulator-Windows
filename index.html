@@ -1,138 +1,548 @@
 <!DOCTYPE html>
-<html lang="IR-fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی دانا کدخدا | برنامه نویسی</title>
+    <title>Windows</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Start Header -->
-    <header class="header">
-        <p>🟰</p>
-        <ul>
-            <li class="nav">صفحه اصلی آکادمی</li>
-            <li class="nav">دوره ها</li>
-            <li class="nav">ورود/ثبت نام</li>
-            <li class="nav">سبد خرید</li>
-            <li class="nav">پشتیبانی</li>
-        </ul>
+
+    <!-- Start the Window -->
+    <!-- Start This PC Window -->
+
+    <div class="win-pc" id="win-this-pc">
+        <div class="header-win-pc">
+            <div class="name-header">
+                <div>
+                    <span>🖥️</span>
+                    <h5>This PC</h5>
+                </div>
+
+            </div>
+            <div class="win-btn">
+
+                <button type="button">➖</button>
+                
+                <button type="button" id="big-win-pc">🔳</button>
+                
+                <button type="button" id="close-win-pc">✖️</button>
+            </div>
+        </div>
+
+        <div class="header-2-win-pc">
+
+            <div>
+                <span>🔙</span>
+                <span>🔜</span>
+                <span>🔝</span>
+                <span>🔄️</span>
+            </div>
+
+            <div>
+                🖥️ &nbsp;&nbsp; > &nbsp;&nbsp; This PC &nbsp;&nbsp; >
+            </div>
+            
+            <input type="search" name="search" id="search-2" placeholder="Search This PC">
+        </div>
+
+
+        <div class="main">
+
+            <div class="sidbar">
+                <div class="part-1-of-sidbar">
+                    <p>🏠 Home</p>
+                    <p>📷 Gallery</p>
+                    <p>☁️ Dana-Personal</p>
+                </div>
+                <div class="part-2-of-sidbar">
+                    <p>💻 Desktop</p>
+                    <p>⬇️ Downloads</p>
+                    <p>📄 Documents</p>
+                    <p>🖼️ Picture</p>
+                    <p>🎵 Music</p>
+                    <p>🎥 Video</p>
+                    <p>🗑️ Recycle Bin</p>
+                </div>
+                <div class="part-3-of-sidbar" style="border-bottom: none;">
+                    <ul>
+                            🔽 🖥️ This PC
+                            <li>> 📟 Local Disk</li>
+                            <li>> 📟 New Volume</li>
+                            <li>> 📟 New Volume</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="drive">
+                <span>
+                    📟
+                    <div>
+                        <div></div>
+                        <div>23.4 GB free of 100 GB</div>
+                    </div>
+                </span>
+                
+                <span>
+                    📟
+                    <div>
+                        <div></div>
+                        <div>60.2 GB free of 68.8 GB</div>
+                    </div>
+                </span>
+                
+                <span>
+                    📟
+                    <div>
+                        <div></div>
+                        <div>44.1 GB free of 68.8 GB</div>
+                    </div>
+                </span>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- End This PC Window -->
+
+
+    
+
+    <!-- Start Files Window -->
+    <div class="win-pc" id="win-files-pc">
+        <div class="header-win-pc">
+            <div class="name-header">
+                <div>
+                    <span>📁</span>
+                    <h5>Files</h5>
+                </div>
+
+            </div>
+            <div class="win-btn">
+
+                <button type="button">➖</button>
+                
+                <button type="button" id="big-win-files">🔳</button>
+                
+                <button type="button" id="close-win-files">✖️</button>
+            </div>
+        </div>
+
+        <div class="header-2-win-pc">
+
+            <div>
+                <span>🔙</span>
+                <span>🔜</span>
+                <span>🔝</span>
+                <span>🔄️</span>
+            </div>
+
+            <div>
+                🖥️ &nbsp;&nbsp; > &nbsp;&nbsp; Files &nbsp;&nbsp; >
+            </div>
+            
+            <input type="search" name="search" id="search-2" placeholder="Search This PC">
+        </div>
+
+
+        <div class="main">
+
+            <div class="sidbar">
+                <div class="part-1-of-sidbar">
+                    <p>🏠 Home</p>
+                    <p>📷 Gallery</p>
+                    <p>☁️ Dana-Personal</p>
+                </div>
+                <div class="part-2-of-sidbar">
+                    <p>💻 Desktop</p>
+                    <p>⬇️ Downloads</p>
+                    <p>📄 Documents</p>
+                    <p>🖼️ Picture</p>
+                    <p>🎵 Music</p>
+                    <p>🎥 Video</p>
+                    <p>🗑️ Recycle Bin</p>
+                </div>
+                <div class="part-3-of-sidbar" style="border-bottom: none;">
+                    <p>🔽 🖥️ This PC</p>
+                    <ul>
+                            <li>> 📟 Local Disk</li>
+                            <li>> 📟 New Volume</li>
+                            <li>> 📟 New Volume</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main-files">
+                <div>
+                    <span>💻</span>
+                    <p>Desktop</p>
+                </div>
+
+
+                <div>
+                    <span>⬇️</span>
+                    <p>Downloads</p>
+                </div>
+
+
+                <div>
+                    <span>📄</span>
+                    <p>Documents</p>
+                </div>
+
+
+                <div>
+                    <span>🖼️</span>
+                    <p>Picture</p>
+                </div>
+
+
+                <div>
+                    <span>🎵</span>
+                    <p>Music</p>
+                </div>
+
+
+                <div>
+                    <span>🎥</span>
+                    <p>Video</p>
+                </div>
+
+
+                <div id="trash-in-files">
+                    <span>🗑️</span>
+                    <p>Recycle Bin</p>
+                </div>
+
+            </div>
+    
+        </div>
+    </div>
+    <!-- End Files Window -->
+
+
+
+    <!-- start Trash Window -->
+    <div class="win-pc" id="win-trash-pc">
+        <div class="header-win-pc">
+            <div class="name-header">
+                <div>
+                    <span>🗑️</span>
+                    <h5>Recycle Bin</h5>
+                </div>
+
+            </div>
+            <div class="win-btn">
+
+                <button type="button">➖</button>
+                
+                <button type="button" id="big-win-trash">🔳</button>
+                
+                <button type="button" id="close-win-trash">✖️</button>
+            </div>
+        </div>
+
+        <div class="header-2-win-pc">
+
+            <div>
+                <span>🔙</span>
+                <span>🔜</span>
+                <span>🔝</span>
+                <span>🔄️</span>
+            </div>
+
+            <div>
+                🖥️ &nbsp;&nbsp; > &nbsp;&nbsp; Recycle Bin &nbsp;&nbsp; >
+            </div>
+            
+            <input type="search" name="search" id="search-2" placeholder="Search This PC">
+        </div>
+
+
+        <div class="main">
+
+            <div class="sidbar">
+                <div class="part-1-of-sidbar">
+                    <p>🏠 Home</p>
+                    <p>📷 Gallery</p>
+                    <p>☁️ Dana-Personal</p>
+                </div>
+                <div class="part-2-of-sidbar">
+                    <p>💻 Desktop</p>
+                    <p>⬇️ Downloads</p>
+                    <p>📄 Documents</p>
+                    <p>🖼️ Picture</p>
+                    <p>🎵 Music</p>
+                    <p>🎥 Video</p>
+                    <p>🗑️ Recycle Bin</p>
+                </div>
+                <div class="part-3-of-sidbar" style="border-bottom: none;">
+                    <p>🔽 🖥️ This PC</p>
+                    <ul>
+                            <li>> 📟 Local Disk</li>
+                            <li>> 📟 New Volume</li>
+                            <li>> 📟 New Volume</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-trash">
+                <h6>This is folder is empty .</h6>
+            </div>
+    
+        </div>
+    </div>
+    <!-- End Trash Window -->
+
+    <!-- Start Note Window -->
+
+    <div class="win-pc" id="win-note-pc">
+        <div class="header-win-pc">
+            <div class="name-header">
+                <div>
+                    <span>📝</span>
+                    <h5>Note</h5>
+                </div>
+
+            </div>
+
+            <span id="big-font">+</span>
+
+            <div>
+                <span style="background-color: black;" class="color-note"></span>
+                <span style="background-color: red;" class="color-note"></span>
+                <span style="background-color: green;" class="color-note"></span>
+                <span style="background-color: blue;" class="color-note"></span>
+                <span style="background-color: yellowgreen;" class="color-note"></span>
+                <span style="background-color: brown;" class="color-note"></span>
+            </div>
+
+            <span id="small-font">-</span>
+
+            <div class="win-btn">
+
+                <button type="button">➖</button>
+                
+                <button type="button" id="big-win-note" style="display: none;">🔳</button>
+                
+                <button type="button" id="close-win-note">✖️</button>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <textarea id="text-note">Welcome to Windows</textarea>
+    
+        </div>
+    </div>
+
+    <!-- End Note Window -->
+
+
+    <!-- Start Desktop -->
+    <div id="desktop">
+        <button type="button" style="top: 0px;" class="icon-desktop" id="icon-pc">🖥️
+            <span>This PC</span>
+        </button>
+        
+        <button type="button" style="top: 90px;" class="icon-desktop" id="icon-trash">🗑️
+            <span>Recycle Bin</span>
+        </button>
+        
+        <button type="button" style="top: 180px;" class="icon-desktop" id="icon-files">📁
+            <span>Files</span>
+        </button>
+        
+        <button type="button" style="top: 270px;" class="icon-desktop" id="des-app-1">🎱
+            <span>Games</span>
+        </button>
+        
+        <button type="button" style="top: 360px;" class="icon-desktop" id="des-app-2">📷
+            <span>Photos</span>
+        </button>
+
+        <button type="button" style="top: 450px;" class="icon-desktop" id="icon-note">📝
+            <span>Note</span>
+        </button>
+
+
+    <div class="start-win" id="start-win">
+        <input type="search" name="search-for-apps" placeholder="🔍 Search for apps, settings and documents">
+        <h3>Pinned</h3>
         <div>
-            <div>
-                <p>Kodi_Learn</p>
-                <p>Dana Kadkhoda</p>
-            </div>
-            <img src="./image/logo.jpg" alt="logo" class="logo">
-        </div>
-    </header>
+            
 
-    <main>
-        <div class="part-1">
-            <div>
-                <p class="about">آکادمی دانا کدخدا . تمام تلاش خود را می کنیم که که بهترین و کاربردی ترین آموزش ها را در اختیار شما عزیزان قرار دهیم . امیدواریم که نیاز های شما را بر طرف کنیم . ما در این مسیر با شما هستیم و در این مسیر جذاب و آینده دار به شما کمک کنیم ، همچنین امیدواریم که با کمک ما و تلاش و پشتکار شما بهترین بازدهی را دریافت کنید . شما می توانید سوال های خود را در قسمت پشتیبانی بپرسید که ادمین ما در سریع ترین زمان به پرسشتان پاسخ دهیم . بیشتر دوره های این آکادمی رایگان در اختیار شما قرار می گیرد و می توانید دوره های پولی را نیز به قیمت پایینی خریداری کنید . بزن بریم !</p>
-            </div>
-
-            <div>
-                <img src="./image/programmer-image.jpg" alt="dana's image" class="programmer-image">
-            </div>
-        </div>
-
-        <div class="part-2">
-            <div class="box">
-                <img src="./image/card (1).jpg" alt="">
-                <h3>🔸دانش ، تخصص ، راهنمایی🔸</h3>
-                <p>کیفیت آموزش با اساتید برتر: از دانش و تجربه مدرسان حرفه‌ای ما بهره‌مند شوید و مسیر یادگیری خود را با اطمینان طی کنید.</p>
-            </div>
-
-
-            <div class="box">
-                <img src="./image/card (2).jpg" alt="">
-                <h3>🔸یادگیری مدرن ، مرتبط با بازار کار ، دانش روز🔸</h3>
-                <p>یادگیری مهارت‌های آینده: دوره‌های ما با آخرین استانداردها و نیازهای روز بازار کار به‌روزرسانی می‌شوند تا شما همواره یک قدم جلوتر باشید.</p>
-            </div>
-
-
-            <div class="box">
-                <img src="./image/card (3).jpg" alt="">
-                <h3>🔸همراهی ، پاسخگویی ، اطمینان خاطر🔸</h3>
-                <p>همراهی همیشگی شما: هر زمان سوال یا نیاز به راهنمایی داشتید، تیم پشتیبانی ما آماده پاسخگویی و رفع مشکلات شماست.</p>
-            </div>
-        </div>
-
-
-        <div class="part-3">
-
-            <h2 class="tit-sam">نمونه کار های آزمایشی</h2>
-
-            <div class="slider">
-                <img src="./image/sam1.png" alt="slide-1" class="slide active">
-                <img src="./image/sam2.png" alt="slide-2" class="slide">
-                <img src="./image/sam3.png" alt="slide-3" class="slide">
-                <img src="./image/sam4.png" alt="slide-4" class="slide">
-
-                <button class="prev">❯</button>
-                <button class="next">❮</button>
-            </div>
-
-            <div class="dots"></div>
-        </div>
-    </main>
-
-    <aside>
-        <div>منو</div>
-        <ul>
-            <li>دوره ها</li>
-            <li>کوئیز ها</li>
-            <li>نظرات</li>
-        </ul>
-    </aside>
-
-    <footer class="footer">
-        <div class="footer-part">
-            <h4>آکادمی دانا کدخدا</h4>
-            <p>با هدف آموزش ، پشتیبانی و کمک در راه رسیدن <br> به هدف هایتان . ما تا انتهای این مسیر با شما هستیم .</p>
-
-            <div>
-                <img src="./image/icon.png" alt="" height="80px" style="margin: 10px;">
-            </div>
-        </div>
-
-
-        <div class="footer-part">
-            <h4>منو</h4>
-            <ul>
-                <li class="footer-nav">⚜️دوره ها</li>
-
-                <li class="footer-nav">⚜️پشتیبانی</li>
-
-                <li class="footer-nav">⚜️ورود/ثبت نام</li>
-
-                <li class="footer-nav">⚜️کوئیز ها</li>
-            </ul>
-        </div>
-
-
-        <div class="footer-part">
-            <h4>ارتباط با ما  در شبکه های اجتماعی</h4>
-            <ul>
                 <div>
-                    <p>dana.kadkhoda90@gmail.com</p>
-                    <li><a href="mailto:dana.kadkhoda90@gmail.com" target="_blank" title="ایمیل"><i class="fas fa-envelope"></i></a></li>
+                    <div>
+                        🧿
+                        <p>Edge</p>
+                    </div>
+                    <div>
+                        🖼️
+                        <p>Photos</p>
+                    </div>
+                    <div>
+                        🏠
+                        <p>Home</p>
+                    </div>
                 </div>
-                <div>
-                    <p>@Kodi_Learn</p>
-                    <li><a href="YOUR_YOUTUBE_LINK" target="_blank" title="یوتیوب"><i class="fab fa-youtube"></i></a></li>
-                </div>
-                <div> 
-                    <p>@Kodi_Learn</p>      
-                    <li><a href="YOUR_TELEGRAM_LINK" target="_blank" title="تلگرام"><i class="fab fa-telegram-plane"></i></a></li>
-                </div>
-            </ul>
-        </div>
-    </footer>
 
-    <script src="./script.js"></script>
+
+                <div>
+                    <div>
+                        📁
+                        <p>Files</p>
+                    </div>
+                    <div>
+                        📷
+                        <p>Camera</p>
+                    </div>
+                    <div>
+                        🔒
+                        <p>Lock</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        🎱
+                        <p>Games</p>
+                    </div>
+                    <div>
+                        🎞️
+                        <p>Video</p>
+                    </div>
+                    <div>
+                        🔎
+                        <p>Search</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        🗑️
+                        <p>Recycle Bin</p>
+                    </div>
+                    <div>
+                        🎨
+                        <p>Paint</p>
+                    </div>
+                    <div>
+                        ➗
+                        <p>Calculator</p>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div>
+                        🎵
+                        <p>Music</p>
+                    </div>
+                    <div>
+                        🖨️
+                        <p>Printers</p>
+                    </div>
+                    <div>
+                        📒
+                        <p>Notepad</p>
+                    </div>
+                </div>
+                
+
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    📁
+                    <div>
+                        <p>Files</p>
+                        <p>4h ago</p>
+                    </div>
+                </td>
+
+
+                <td>
+                    🎮
+                    <div>
+                        <p>Games</p>
+                        <p>10m ago</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>    
+       
+    <!-- End Desktop -->
+
+
+    <!-- Start Taskbar -->
+    </div>
+    <div id="taskbar">
+        <div class="start-task">
+            <a class="task-icon" id="start-icon">🪟</a>
+        
+            <input type="search" name="search" id="search" placeholder="🔍 Search">
+            
+            <a class="task-icon">🔲</a>
+            
+            <a class="task-icon">🌍</a>
+            
+            <a class="task-icon">💼</a>
+            
+            <a class="task-icon">📁</a>
+            
+            <a class="task-icon">🎮</a>
+        </div>
+
+
+
+        <div class="end-task">
+
+
+
+            <a id="show-small-app">🔺</a>
+
+            <span class="con-small-app">
+                <div>
+                    <span>🔐</span>
+                    <span>📱</span>
+                    <span>🖨️</span>
+                    <span>🎞️</span>
+                </div>
+            </span>
+            <p class="lang" id="lang">ENG</p>
+
+            <div>
+                <span>🛜</span>
+
+                <div>
+                    <span id="up-sound">+</span>
+                    <span id="set-sound1"></span>
+                    <span id="set-sound2"></span>
+                    <span id="set-sound3"></span>
+                    <span id="sound" data-value="10%">🔊</span>
+                    <span id="down-sound">-</span>
+                </div>
+                
+                <span id="bat">🪫</span>
+            </div>
+
+            <div>
+                <p id="clock"></p>
+                <p id="date"></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Taskbar -->
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
